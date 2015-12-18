@@ -41,7 +41,7 @@ words = {
   }
 }
 
-h = Hart.new(routes)
+h = Hart.new(words)
 h.call(:define, "/c/o/d")     #=> "A husk; a pod; as, a peascod."
 h.call(:define, "/c/o/d/e")   #=> "System of rules relating to one subject."
 h.call(:define, "/c/o/d/e/r") #=> nil
