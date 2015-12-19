@@ -133,7 +133,7 @@ routes = {
   },
 
   "users" => {
-    GET: [200, {}, ["GET /posts"]],
+    GET: [200, {}, ["GET /users"]],
 
     id: proc { |id|
       {
