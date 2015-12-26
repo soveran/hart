@@ -114,6 +114,10 @@ scope "routing HTTP requests" do
     assert_equal 200, f.last_response.status
     assert_equal "GET /foo/bar", f.last_response.body
 
+    f.get("/foo")
+    assert_equal 404, f.last_response.status
+    assert_equal "", f.last_response.body
+
     f.put("/foo/bar")
     assert_equal 200, f.last_response.status
     assert_equal "PUT /foo/bar", f.last_response.body
