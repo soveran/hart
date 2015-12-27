@@ -41,10 +41,6 @@ class Hart
       break if route.nil?
     end
 
-    if route
-      route[verb.intern]
-    else
-      routes[:default]
-    end
+    route && route[verb.intern] || routes[:default]
   end
 end
